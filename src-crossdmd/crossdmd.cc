@@ -34,7 +34,7 @@ int main() {
     
     /* convert a humanreadable ip address to a c struct */
 	struct sockaddr_in bind_addr ;
-	int ret = uv_ip4_addr("0.0.0.0", 3000, &bind_addr);    
+	int ret = uv_ip4_addr("0.0.0.0", 8430, &bind_addr);    
 
     /* initialize the server */
     uv_tcp_init(loop, &server);
