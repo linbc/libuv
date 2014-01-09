@@ -527,6 +527,15 @@
         }],
       ]
     },
-
+	
+	{
+		'target_name': 'crossdmd',		
+		'type': 'executable',
+		'dependencies': [ 'libuv' ],
+		'sources': ['src-crossdmd/crossdmd.cc'],
+		'include_dirs': ['include','src-crossdmd/'],
+		'conditions': [[ 'OS=="win"', {'libraries': [ 'ws2_32.lib' ]}, { 'defines': [ '_GNU_SOURCE' ]}]
+      ],
+	},
   ]
 }
